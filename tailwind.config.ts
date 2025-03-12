@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,7 +67,8 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+                none: '0', // For 90 degree corners as per requirements
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,12 +86,52 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'fade-in': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                'fade-out': {
+                    '0%': { opacity: '1' },
+                    '100%': { opacity: '0' },
+                },
+                'slide-up': {
+                    '0%': { transform: 'translateY(10px)', opacity: '0' },
+                    '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                'slide-down': {
+                    '0%': { transform: 'translateY(-10px)', opacity: '0' },
+                    '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                'pulse-opacity': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.5' },
+                },
+                'scan-line': {
+                    '0%': { transform: 'translateY(0)' },
+                    '100%': { transform: 'translateY(100%)' },
+                },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'fade-in': 'fade-in 0.3s ease-out',
+                'fade-out': 'fade-out 0.3s ease-out',
+                'slide-up': 'slide-up 0.5s ease-out',
+                'slide-down': 'slide-down 0.5s ease-out',
+                'pulse-opacity': 'pulse-opacity 2s infinite ease-in-out',
+                'scan-line': 'scan-line 1.5s infinite ease-in-out',
+			},
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'hero-gradient': 'linear-gradient(to right bottom, rgb(236, 240, 243), rgb(250, 250, 252))',
+                'card-gradient': 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4))',
+                'button-gradient': 'linear-gradient(to right, rgb(113, 113, 122), rgb(160, 160, 171))',
+            },
+            backdropFilter: {
+                'none': 'none',
+                'blur': 'blur(20px)',
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
