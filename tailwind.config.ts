@@ -124,7 +124,7 @@ export default {
 			},
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'hero-gradient': 'linear-gradient(to right bottom, rgb(236, 240, 243), rgb(250, 250, 252))',
+                'dark-gradient': 'linear-gradient(to top right, #222222, #CCCCCC)',
                 'card-gradient': 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4))',
                 'button-gradient': 'linear-gradient(to right, rgb(113, 113, 122), rgb(160, 160, 171))',
             },

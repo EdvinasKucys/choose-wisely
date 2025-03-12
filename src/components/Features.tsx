@@ -11,7 +11,7 @@ interface FeatureProps {
 }
 
 const Feature = ({ icon, title, description }: FeatureProps) => (
-  <div className="group p-6 bg-white border border-gray-100 rounded-none shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in">
+  <div className="group p-6 bg-white/90 border border-gray-100 rounded-none shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in">
     <div className="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-none mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
       {icon}
     </div>
@@ -65,11 +65,11 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-24 bg-gradient-to-tr from-[#333333] to-[#888888] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-4">Make Better Decisions, Effortlessly</h2>
-          <p className="text-gray-600">
+          <h2 className="text-3xl font-bold mb-4 text-white">Make Better Decisions, Effortlessly</h2>
+          <p className="text-gray-200">
             Our platform helps you navigate choices across all aspects of life, 
             from major purchases to everyday decisions.
           </p>
