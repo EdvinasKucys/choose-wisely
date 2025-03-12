@@ -93,12 +93,15 @@ const Browse = () => {
               {filteredListings.map((listing) => (
                 <ListingCard
                   key={listing.id}
-                  title={listing.title}
-                  description={listing.description}
-                  price={listing.price}
-                  location={listing.location}
-                  category={listing.category}
-                  imageUrl={listing.imageUrl}
+                  listing={{
+                    id: listing.id,
+                    title: listing.title,
+                    description: listing.description,
+                    price: listing.price,
+                    location: listing.location,
+                    category: listing.category,
+                    images: [listing.imageUrl]
+                  }}
                 />
               ))}
             </div>
