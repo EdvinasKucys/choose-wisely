@@ -9,6 +9,9 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import Browse from "./pages/Browse";
+import GetRecommendation from "./pages/GetRecommendation";
+import Reviews from "./pages/Reviews";
 
 const queryClient = new QueryClient();
 
@@ -23,9 +26,9 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/browse" element={<NotFound />} /> {/* Placeholder for future browsing page */}
-          <Route path="/get-recommendation" element={<NotFound />} /> {/* Placeholder for future recommendation page */}
-          <Route path="/reviews" element={<NotFound />} /> {/* Placeholder for future YouTube reviews page */}
+          <Route path="/browse" element={<Browse />} />
+          <Route path="/get-recommendation" element={<GetRecommendation />} />
+          <Route path="/reviews" element={<Reviews />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

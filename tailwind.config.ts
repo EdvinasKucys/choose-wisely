@@ -124,7 +124,11 @@ export default {
 			},
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'dark-gradient': 'linear-gradient(to top right, #222222, #CCCCCC)',
+                'dark-gradient': 'linear-gradient(to top right, #222222, #888888)',
+                'green-gradient': 'linear-gradient(to top right, #1a472a, #b8e0d2)',
+                'blue-gradient': 'linear-gradient(to top right, #0c4a6e, #7dd3fc)',
+                'purple-gradient': 'linear-gradient(to top right, #4a044e, #e9d5ff)',
+                'teal-gradient': 'linear-gradient(to top right, #134e4a, #99f6e4)',
                 'card-gradient': 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4))',
                 'button-gradient': 'linear-gradient(to right, rgb(113, 113, 122), rgb(160, 160, 171))',
             },

@@ -153,3 +153,24 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-gray-300 hover:bg-gray-400 rounded-full transition-colors;
 }
+
+/* Gradient backgrounds */
+.bg-gradient-green {
+  @apply bg-gradient-to-tr from-[#1a472a] to-[#b8e0d2];
+}
+
+.bg-gradient-gray {
+  @apply bg-gradient-to-tr from-[#222222] to-[#888888];
+}
+
+.bg-gradient-blue {
+  @apply bg-gradient-to-tr from-[#0c4a6e] to-[#7dd3fc];
+}
+
+.bg-gradient-purple {
+  @apply bg-gradient-to-tr from-[#4a044e] to-[#e9d5ff];
+}
+
+.bg-gradient-teal {
+  @apply bg-gradient-to-tr from-[#134e4a] to-[#99f6e4];
+}
