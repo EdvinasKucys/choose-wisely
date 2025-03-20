@@ -1,10 +1,18 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Eye, Heart } from "lucide-react";
-import { Listing } from "@/lib/constants";
 import { useState } from "react";
+
+interface Listing {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  category: string;
+  images: string[];
+  features: string[];
+  createdAt: Date;
+  userId: string;
+}
 
 interface ListingCardProps {
   listing: Listing;
@@ -22,69 +30,84 @@ const ListingCard = ({ listing, onView, onSave }: ListingCardProps) => {
   };
   
   return (
-    <Card 
-      className="overflow-hidden border-gray-200 transition-all duration-300 hover:shadow-md"
+    <div 
+      className="listing-card card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative" style={{ height: '12rem', overflow: 'hidden' }}>
         <img 
           src={listing.images[0] || "/placeholder.svg"} 
           alt={listing.title}
-          className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}
+          className="listing-image"
+          style={{ transform: isHovered ? 'scale(1.05)' : 'scale(1)' }}
         />
-        <div className="absolute top-2 right-2">
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm hover:bg-white"
+        <div style={{ position: 'absolute', top: '8px', right: '8px' }}>
+          <button 
+            className="btn-sm"
+            style={{
+              width: '2rem',
+              height: '2rem',
+              borderRadius: '9999px',
+              backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              backdropFilter: 'blur(4px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
             onClick={handleSaveClick}
           >
-            <Heart className={`h-4 w-4 ${isSaved ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
-          </Button>
+            <Heart 
+              style={{ 
+                width: '1rem', 
+                height: '1rem',
+                color: isSaved ? '#ef4444' : '#4b5563',
+                fill: isSaved ? '#ef4444' : 'none'
+              }} 
+            />
+          </button>
         </div>
-        <div className="absolute bottom-2 left-2">
-          <Badge variant="secondary" className="bg-white/80 backdrop-blur-sm text-primary">
+        <div style={{ position: 'absolute', bottom: '8px', left: '8px' }}>
+          <span className="badge badge-secondary">
             {listing.category}
-          </Badge>
+          </span>
         </div>
       </div>
       
-      <CardHeader className="p-4 pb-2">
-        <CardTitle className="text-lg line-clamp-1">{listing.title}</CardTitle>
-        <CardDescription className="flex items-center">
+      <div className="p-4 pb-2">
+        <h3 className="text-lg font-semibold line-clamp-1">{listing.title}</h3>
+        <div className="flex items-center">
           <span className="font-medium text-primary">${listing.price.toLocaleString()}</span>
-        </CardDescription>
-      </CardHeader>
+        </div>
+      </div>
       
-      <CardContent className="p-4 pt-2">
+      <div className="p-4 pt-2">
         <p className="text-gray-600 text-sm line-clamp-2">{listing.description}</p>
         
         <div className="mt-3 flex flex-wrap gap-1">
           {listing.features.slice(0, 3).map((feature, index) => (
-            <Badge key={index} variant="outline" className="bg-gray-50 text-xs">
+            <span key={index} className="badge badge-outline text-xs">
               {feature}
-            </Badge>
+            </span>
           ))}
           {listing.features.length > 3 && (
-            <Badge variant="outline" className="bg-gray-50 text-xs">
+            <span className="badge badge-outline text-xs">
               +{listing.features.length - 3} more
-            </Badge>
+            </span>
           )}
         </div>
-      </CardContent>
+      </div>
       
-      <CardFooter className="p-4 pt-0 flex justify-between">
-        <Button 
-          variant="outline" 
-          size="sm" 
-          className="w-full rounded-none"
+      <div className="p-4 pt-0 flex justify-between">
+        <button 
+          className="btn btn-outline w-full"
+          style={{ fontSize: '0.875rem', padding: '0.5rem 1rem' }}
           onClick={() => onView && onView(listing)}
         >
-          <Eye className="h-4 w-4 mr-2" /> View Details
-        </Button>
-      </CardFooter>
-    </Card>
+          <Eye style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} /> View Details
+        </button>
+      </div>
+    </div>
   );
 };
 

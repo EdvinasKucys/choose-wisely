@@ -11,11 +11,11 @@ interface FeatureProps {
 }
 
 const Feature = ({ icon, title, description }: FeatureProps) => (
-  <div className="group p-6 bg-white/90 border border-gray-100 rounded-none shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in">
-    <div className="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-none mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+  <div className="feature-card animate-fade-in">
+    <div className="feature-icon">
       {icon}
     </div>
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <h3 className="text-lg font-semibold mb-2 text-gray-800">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </div>
 );
@@ -23,50 +23,50 @@ const Feature = ({ icon, title, description }: FeatureProps) => (
 const Features = () => {
   const features = [
     {
-      icon: <User className="h-6 w-6" />,
+      icon: <User style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Personalized Recommendations",
       description: "Get tailored suggestions based on your personality, preferences and needs."
     },
     {
-      icon: <Home className="h-6 w-6" />,
+      icon: <Home style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Real Estate Matchmaking",
       description: "Find your perfect home that matches your lifestyle and aesthetic preferences."
     },
     {
-      icon: <Car className="h-6 w-6" />,
+      icon: <Car style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Vehicle Selection",
       description: "Discover the ideal car that fits your practical needs and personal style."
     },
     {
-      icon: <ShoppingBag className="h-6 w-6" />,
+      icon: <ShoppingBag style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Shopping Assistant",
       description: "Let us help you find products that truly match your personal taste."
     },
     {
-      icon: <Briefcase className="h-6 w-6" />,
+      icon: <Briefcase style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Career Guidance",
       description: "Get insights on job opportunities that align with your skills and personality."
     },
     {
-      icon: <Heart className="h-6 w-6" />,
+      icon: <Heart style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Relationship Advice",
       description: "Receive suggestions for compatible partners based on your character traits."
     },
     {
-      icon: <Headphones className="h-6 w-6" />,
+      icon: <Headphones style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Music Recommendations",
       description: "Discover new music that resonates with your mood and preferences."
     },
     {
-      icon: <Send className="h-6 w-6" />,
+      icon: <Send style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: "Travel Planning",
       description: "Find destinations and accommodations that match your travel style."
     },
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-tr from-[#1a472a] to-[#b8e0d2] text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="features-section">
+      <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold mb-4 text-white">Make Better Decisions, Effortlessly</h2>
           <p className="text-gray-200">
