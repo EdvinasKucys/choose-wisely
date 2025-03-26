@@ -1,7 +1,12 @@
-
-import { 
-  User, Home, Car, ShoppingBag, Briefcase, 
-  Heart, Headphones, Send 
+import {
+  User,
+  Home,
+  Car,
+  ShoppingBag,
+  Briefcase,
+  Heart,
+  Headphones,
+  Send,
 } from "lucide-react";
 
 interface FeatureProps {
@@ -25,42 +30,50 @@ const Features = () => {
     {
       icon: <User className="h-6 w-6" />,
       title: "Personalized Recommendations",
-      description: "Get tailored suggestions based on your personality, preferences and needs."
+      description:
+        "Get tailored suggestions based on your personality, preferences and needs.",
     },
     {
       icon: <Home className="h-6 w-6" />,
       title: "Real Estate Matchmaking",
-      description: "Find your perfect home that matches your lifestyle and aesthetic preferences."
+      description:
+        "Find your perfect home that matches your lifestyle and aesthetic preferences.",
     },
     {
       icon: <Car className="h-6 w-6" />,
       title: "Vehicle Selection",
-      description: "Discover the ideal car that fits your practical needs and personal style."
+      description:
+        "Discover the ideal car that fits your practical needs and personal style.",
     },
     {
       icon: <ShoppingBag className="h-6 w-6" />,
       title: "Shopping Assistant",
-      description: "Let us help you find products that truly match your personal taste."
+      description:
+        "Let us help you find products that truly match your personal taste.",
     },
     {
       icon: <Briefcase className="h-6 w-6" />,
       title: "Career Guidance",
-      description: "Get insights on job opportunities that align with your skills and personality."
+      description:
+        "Get insights on job opportunities that align with your skills and personality.",
     },
     {
       icon: <Heart className="h-6 w-6" />,
       title: "Relationship Advice",
-      description: "Receive suggestions for compatible partners based on your character traits."
+      description:
+        "Receive suggestions for compatible partners based on your character traits.",
     },
     {
       icon: <Headphones className="h-6 w-6" />,
       title: "Music Recommendations",
-      description: "Discover new music that resonates with your mood and preferences."
+      description:
+        "Discover new music that resonates with your mood and preferences.",
     },
     {
       icon: <Send className="h-6 w-6" />,
       title: "Travel Planning",
-      description: "Find destinations and accommodations that match your travel style."
+      description:
+        "Find destinations and accommodations that match your travel style.",
     },
   ];
 
@@ -68,16 +81,18 @@ const Features = () => {
     <section className="py-24 bg-gradient-to-tr from-[#1a472a] to-[#b8e0d2] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-white">Make Better Decisions, Effortlessly</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Make Better Decisions, Effortlessly
+          </h2>
           <p className="text-gray-200">
-            Our platform helps you navigate choices across all aspects of life, 
+            Our platform helps you navigate choices across all aspects of life,
             from major purchases to everyday decisions.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Feature 
+            <Feature
               key={index}
               icon={feature.icon}
               title={feature.title}
