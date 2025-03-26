@@ -1,4 +1,3 @@
-
 export const APP_NAME = "Choose Wisely";
 
 export const CATEGORIES = [
@@ -16,7 +15,7 @@ export const CATEGORIES = [
   "Pets",
 ];
 
-export type Category = typeof CATEGORIES[number];
+export type Category = (typeof CATEGORIES)[number];
 
 export const CRYPTO_PAYMENT_METHODS = [
   { id: "btc", name: "Bitcoin (BTC)", icon: "bitcoin" },
@@ -25,15 +24,13 @@ export const CRYPTO_PAYMENT_METHODS = [
 ];
 
 export interface Listing {
-  id: string;
+  id: number;
   title: string;
   description: string;
-  price: number;
+  price: string;
+  location: string;
   category: Category;
   images: string[];
-  features: string[];
-  createdAt: Date;
-  userId: string;
 }
 
 export interface User {
