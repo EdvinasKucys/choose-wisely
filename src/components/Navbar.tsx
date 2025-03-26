@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ import { APP_NAME } from "@/lib/constants";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  
+
   const isActive = (path: string) => {
     return location.pathname === path;
   };
@@ -19,104 +18,132 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
           <div className="flex items-center">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-lg sm:text-xl font-semibold text-primary transition-all duration-300 hover:opacity-80"
             >
               {APP_NAME}
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/") ? "text-primary" : "text-gray-600"
+              }`}
             >
               Home
             </Link>
-            <Link 
-              to="/browse" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/browse') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/browse"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/browse") ? "text-primary" : "text-gray-600"
+              }`}
             >
               Browse
             </Link>
-            <Link 
-              to="/get-recommendation" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/get-recommendation') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/get-recommendation"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/get-recommendation")
+                  ? "text-primary"
+                  : "text-gray-600"
+              }`}
             >
               Get Recommendations
             </Link>
-            <Link 
-              to="/dashboard" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/dashboard') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/dashboard"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/dashboard") ? "text-primary" : "text-gray-600"
+              }`}
             >
               Dashboard
             </Link>
           </nav>
-          
+
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="icon" className="rounded-none">
               <Search className="h-5 w-5" />
             </Button>
             <Link to="/login">
-              <Button variant="outline" className="rounded-none">Sign In</Button>
+              <Button variant="outline" className="rounded-none">
+                Sign In
+              </Button>
             </Link>
             <Link to="/register">
               <Button className="rounded-none">Register</Button>
             </Link>
           </div>
-          
+
           {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="rounded-none"
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 animate-slide-down">
           <div className="py-4 px-4 space-y-4">
-            <Link 
-              to="/" 
-              className={`block text-sm font-medium transition-colors hover:text-primary ${isActive('/') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/"
+              className={`block text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/") ? "text-primary" : "text-gray-600"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
-            <Link 
-              to="/browse" 
-              className={`block text-sm font-medium transition-colors hover:text-primary ${isActive('/browse') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/browse"
+              className={`block text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/browse") ? "text-primary" : "text-gray-600"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Browse
             </Link>
-            <Link 
-              to="/get-recommendation" 
-              className={`block text-sm font-medium transition-colors hover:text-primary ${isActive('/get-recommendation') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/get-recommendation"
+              className={`block text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/get-recommendation")
+                  ? "text-primary"
+                  : "text-gray-600"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Get Recommendations
             </Link>
-            <Link 
-              to="/dashboard" 
-              className={`block text-sm font-medium transition-colors hover:text-primary ${isActive('/dashboard') ? 'text-primary' : 'text-gray-600'}`}
+            <Link
+              to="/dashboard"
+              className={`block text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/dashboard") ? "text-primary" : "text-gray-600"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Dashboard
             </Link>
             <div className="pt-4 flex flex-col space-y-3">
               <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                <Button variant="outline" className="w-full rounded-none">Sign In</Button>
+                <Button variant="outline" className="w-full rounded-none">
+                  Sign In
+                </Button>
               </Link>
               <Link to="/register" onClick={() => setIsMenuOpen(false)}>
                 <Button className="w-full rounded-none">Register</Button>
