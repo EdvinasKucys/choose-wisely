@@ -52,7 +52,7 @@ const Navbar = () => {
                   : "text-gray-600"
               }`}
             >
-              Get Recommendations
+              Get A Life
             </Link>
             <Link
               to="/dashboard"
@@ -60,7 +60,7 @@ const Navbar = () => {
                 isActive("/dashboard") ? "text-primary" : "text-gray-600"
               }`}
             >
-              Dashboard
+              Profile
             </Link>
           </nav>
 

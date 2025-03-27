@@ -34,7 +34,7 @@ const Login = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-grow flex items-center justify-center px-4 py-24 bg-hero-gradient">
+      <main className="flex-grow flex items-center justify-center px-4 py-24 bg-gradient-sun-down">
         <Card className="w-full max-w-md animate-fade-in glass-card">
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl font-bold">Sign In</CardTitle>

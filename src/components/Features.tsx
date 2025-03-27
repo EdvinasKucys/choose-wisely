@@ -20,7 +20,7 @@ const Feature = ({ icon, title, description }: FeatureProps) => (
     <div className="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-none mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
       {icon}
     </div>
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <h3 className="text-violetine font-semibold mb-2">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </div>
 );
@@ -78,7 +78,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-tr from-[#1a472a] to-[#b8e0d2] text-white">
+    <section className="py-24 bg-gradient-sun-reverse text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold mb-4 text-white">

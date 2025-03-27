@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-gradient-to-tr from-[#222222] to-[#888888]">
-      <div className="absolute inset-0 bg-gradient-sun pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-sun-down pointer-events-none"></div>
       <div className="container mx-auto px-4 py-32 sm:py-48 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
-          <div className="inline-block px-3 py-1 rounded-none bg-primary/10 text-primary text-xs font-medium mb-6 animate-pulse-opacity">
+          <div className="inline-block px-3 py-1 rounded-none bg-primary/10 text-balta text-xs font-medium mb-6 animate-pulse-opacity">
             Making Decisions Simple
           </div>
 
@@ -35,7 +35,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-none text-md px-8 py-6 border-white/50 bg-transparent text-white hover:bg-white/10"
+                className="rounded-none text-md px-8 py-6 border-white/50 bg-balta text-violetine hover:bg-white/10"
               >
                 Browse Listings
               </Button>

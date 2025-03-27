@@ -19,6 +19,11 @@ export default {
     },
     extend: {
       colors: {
+        juoda: "var(--juoda)",
+        geltona: "var(--geltona)",
+        raudona: "var(--raudona)",
+        balta: "var(--balta)",
+        violetine: "var(--violetine)",
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
@@ -122,8 +127,12 @@ export default {
         "scan-line": "scan-line 1.5s infinite ease-in-out",
       },
       backgroundImage: {
-        "gradient-sun":
-          "linear-gradient(to bottom, var(--juoda),var(--geltona))",
+        "gradient-sun-up":
+          "linear-gradient(to bottom, var(--juoda),var(--geltona), var(--raudona))",
+        "gradient-sun-down":
+          "linear-gradient(to bottom, var(--juoda),var(--raudona),var(--geltona),var(--juoda))",
+        "gradient-sun-reverse":
+          "linear-gradient(to bottom, var(--juoda),var(--raudona),var(--juoda))",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "dark-gradient": "linear-gradient(to top right, #222222, #888888)",
         "green-gradient": "linear-gradient(to top right, #1a472a, #b8e0d2)",

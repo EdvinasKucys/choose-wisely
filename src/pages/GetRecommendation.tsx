@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -411,10 +412,12 @@ const GetRecommendation = () => {
                   </p>
 
                   <div className="flex justify-center mt-6">
-                    <Button className="rounded-none">
-                      Browse More Recommendations{" "}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link to="/browse">
+                      <Button className="rounded-none">
+                        Browse More Recommendations{" "}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               )}
