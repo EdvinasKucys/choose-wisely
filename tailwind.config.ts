@@ -123,7 +123,7 @@ export default {
       },
       backgroundImage: {
         "gradient-sun":
-          "linear-gradient(to bottom right, var(--juoda),var(--geltona))",
+          "linear-gradient(to bottom, var(--juoda),var(--geltona))",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "dark-gradient": "linear-gradient(to top right, #222222, #888888)",
         "green-gradient": "linear-gradient(to top right, #1a472a, #b8e0d2)",
