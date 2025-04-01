@@ -1,59 +1,69 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ListingCard from "@/components/ListingCard";
-import { User, Plus, Settings, LogOut, Heart, Clock, ShoppingBag, MessageSquare } from "lucide-react";
+import {
+  User,
+  Plus,
+  Settings,
+  LogOut,
+  Heart,
+  Clock,
+  ShoppingBag,
+  MessageSquare,
+} from "lucide-react";
 import { Listing } from "@/lib/constants";
 
 const Dashboard = () => {
   // Mock data for demonstration
   const myListings: Listing[] = [
     {
-      id: "1",
+      id: 1,
       title: "Modern apartment in city center",
-      description: "A beautiful apartment with 2 bedrooms, fully furnished and renovated.",
-      price: 150000,
+      description:
+        "A beautiful apartment with 2 bedrooms, fully furnished and renovated.",
+      price: "150000",
       category: "Real Estate",
       images: ["https://placehold.co/600x400/e2e8f0/1e293b?text=Apartment"],
-      features: ["2 Bedrooms", "Central Location", "Renovated", "Furnished"],
-      createdAt: new Date(),
-      userId: "123",
+      location: "Vilnius, Lithuania",
     },
     {
-      id: "2",
+      id: 2,
       title: "2019 Toyota Camry Hybrid",
       description: "Low mileage, excellent condition, regularly serviced.",
-      price: 25000,
+      price: "25000",
       category: "Vehicles",
       images: ["https://placehold.co/600x400/e2e8f0/1e293b?text=Car"],
-      features: ["Hybrid", "Low Mileage", "Excellent Condition", "Service History"],
-      createdAt: new Date(),
-      userId: "123",
+      location: "Kaunas, Lithuania",
     },
   ];
-  
+
   const savedListings: Listing[] = [
     {
-      id: "3",
+      id: 3,
       title: "Elegant house with garden",
-      description: "Spacious 4-bedroom house with a beautiful garden and modern amenities.",
-      price: 320000,
+      description:
+        "Spacious 4-bedroom house with a beautiful garden and modern amenities.",
+      price: "320000",
       category: "Real Estate",
       images: ["https://placehold.co/600x400/e2e8f0/1e293b?text=House"],
-      features: ["4 Bedrooms", "Garden", "Modern Kitchen", "Garage"],
-      createdAt: new Date(),
-      userId: "456",
+      location: "Vilnius, Lithuania",
     },
   ];
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-grow px-4 py-24 bg-gray-50">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -75,29 +85,48 @@ const Dashboard = () => {
                   <div className="space-y-4 mt-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-2 bg-gray-100">
-                        <p className="text-xl font-semibold">{myListings.length}</p>
+                        <p className="text-xl font-semibold">
+                          {myListings.length}
+                        </p>
                         <p className="text-sm text-gray-500">My Listings</p>
                       </div>
                       <div className="text-center p-2 bg-gray-100">
-                        <p className="text-xl font-semibold">{savedListings.length}</p>
+                        <p className="text-xl font-semibold">
+                          {savedListings.length}
+                        </p>
                         <p className="text-sm text-gray-500">Saved</p>
                       </div>
                     </div>
-                    
+
                     <div className="pt-4 space-y-2">
-                      <Button variant="outline" className="w-full justify-start rounded-none">
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start rounded-none"
+                      >
                         <Settings className="h-4 w-4 mr-2" /> Account Settings
                       </Button>
-                      <Button variant="outline" className="w-full justify-start rounded-none">
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start rounded-none"
+                      >
                         <Heart className="h-4 w-4 mr-2" /> Saved Items
                       </Button>
-                      <Button variant="outline" className="w-full justify-start rounded-none">
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start rounded-none"
+                      >
                         <Clock className="h-4 w-4 mr-2" /> Purchase History
                       </Button>
-                      <Button variant="outline" className="w-full justify-start rounded-none">
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start rounded-none"
+                      >
                         <MessageSquare className="h-4 w-4 mr-2" /> Messages
                       </Button>
-                      <Button variant="outline" className="w-full justify-start rounded-none text-destructive">
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start rounded-none text-destructive"
+                      >
                         <LogOut className="h-4 w-4 mr-2" /> Sign Out
                       </Button>
                     </div>
@@ -105,7 +134,7 @@ const Dashboard = () => {
                 </CardContent>
               </Card>
             </div>
-            
+
             {/* Main Content */}
             <div className="md:col-span-9">
               <div className="flex justify-between items-center mb-6">
@@ -114,14 +143,20 @@ const Dashboard = () => {
                   <Plus className="h-4 w-4 mr-2" /> New Listing
                 </Button>
               </div>
-              
+
               <Tabs defaultValue="listings">
                 <TabsList className="grid grid-cols-3 mb-8">
-                  <TabsTrigger value="listings" className="rounded-none">My Listings</TabsTrigger>
-                  <TabsTrigger value="saved" className="rounded-none">Saved Items</TabsTrigger>
-                  <TabsTrigger value="recommendations" className="rounded-none">Recommendations</TabsTrigger>
+                  <TabsTrigger value="listings" className="rounded-none">
+                    My Listings
+                  </TabsTrigger>
+                  <TabsTrigger value="saved" className="rounded-none">
+                    Saved Items
+                  </TabsTrigger>
+                  <TabsTrigger value="recommendations" className="rounded-none">
+                    Recommendations
+                  </TabsTrigger>
                 </TabsList>
-                
+
                 <TabsContent value="listings" className="space-y-6">
                   {myListings.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -133,15 +168,21 @@ const Dashboard = () => {
                           <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mb-4">
                             <Plus className="h-6 w-6 text-gray-500" />
                           </div>
-                          <p className="text-gray-600 font-medium">Add New Listing</p>
+                          <p className="text-gray-600 font-medium">
+                            Add New Listing
+                          </p>
                         </CardContent>
                       </Card>
                     </div>
                   ) : (
                     <div className="text-center py-12 bg-gray-50">
                       <ShoppingBag className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-medium text-gray-900">No listings yet</h3>
-                      <p className="mt-1 text-gray-500">Get started by creating a new listing.</p>
+                      <h3 className="text-lg font-medium text-gray-900">
+                        No listings yet
+                      </h3>
+                      <p className="mt-1 text-gray-500">
+                        Get started by creating a new listing.
+                      </p>
                       <div className="mt-6">
                         <Button>
                           <Plus className="h-4 w-4 mr-2" /> Add New Listing
@@ -150,7 +191,7 @@ const Dashboard = () => {
                     </div>
                   )}
                 </TabsContent>
-                
+
                 <TabsContent value="saved" className="space-y-6">
                   {savedListings.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,30 +202,33 @@ const Dashboard = () => {
                   ) : (
                     <div className="text-center py-12 bg-gray-50">
                       <Heart className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-medium text-gray-900">No saved items</h3>
-                      <p className="mt-1 text-gray-500">Items you save will appear here.</p>
+                      <h3 className="text-lg font-medium text-gray-900">
+                        No saved items
+                      </h3>
+                      <p className="mt-1 text-gray-500">
+                        Items you save will appear here.
+                      </p>
                       <div className="mt-6">
-                        <Button variant="outline">
-                          Browse Listings
-                        </Button>
+                        <Button variant="outline">Browse Listings</Button>
                       </div>
                     </div>
                   )}
                 </TabsContent>
-                
+
                 <TabsContent value="recommendations" className="space-y-6">
                   <div className="text-center py-12 bg-gray-50">
                     <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                       <Settings className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-lg font-medium text-gray-900">Set up your preferences</h3>
+                    <h3 className="text-lg font-medium text-gray-900">
+                      Set up your preferences
+                    </h3>
                     <p className="mt-1 text-gray-500 max-w-md mx-auto">
-                      Complete your profile with your preferences to receive personalized recommendations.
+                      Complete your profile with your preferences to receive
+                      personalized recommendations.
                     </p>
                     <div className="mt-6">
-                      <Button>
-                        Complete Profile
-                      </Button>
+                      <Button>Complete Profile</Button>
                     </div>
                   </div>
                 </TabsContent>
@@ -193,7 +237,7 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

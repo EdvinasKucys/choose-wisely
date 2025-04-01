@@ -16,40 +16,40 @@ const Browse = () => {
       title: "Modern Apartment in City Center",
       description:
         "Spacious 2-bedroom apartment with modern amenities and great city views.",
-      price: "€120,000",
+      price: "120,000",
       location: "Vilnius, Lithuania",
       category: "Real Estate",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/modernApartment.jpg",
     },
     {
       id: 2,
       title: "BMW X5 2021 Model",
       description:
         "Excellent condition with low mileage. Full service history and premium package.",
-      price: "€45,000",
+      price: "45,000",
       location: "Kaunas, Lithuania",
       category: "Vehicles",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/bmw.jpg",
     },
     {
       id: 3,
       title: "Professional DSLR Camera",
       description:
         "High-end camera with multiple lenses, perfect for photography enthusiasts.",
-      price: "€1,200",
+      price: "1,200",
       location: "Klaipėda, Lithuania",
       category: "Electronics",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/proCamera.jpg",
     },
     {
       id: 4,
       title: "Vintage Wooden Desk",
       description:
         "Beautiful handcrafted wooden desk with three drawers, perfect for a home office.",
-      price: "€350",
+      price: "350",
       location: "Šiauliai, Lithuania",
       category: "Furniture",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/vintageDesk.jpg",
     },
   ];
 

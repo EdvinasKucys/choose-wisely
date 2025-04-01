@@ -69,7 +69,7 @@ const ListingCard = ({ listing, onView, onSave }: ListingCardProps) => {
         <CardTitle className="text-lg line-clamp-1">{listing.title}</CardTitle>
         <CardDescription className="flex items-center">
           <span className="font-medium text-primary">
-            ${listing.price.toLocaleString()}
+            €{listing.price.toLocaleString()}
           </span>
         </CardDescription>
       </CardHeader>
