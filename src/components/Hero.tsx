@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-gradient-to-tr from-[#222222] to-[#888888]">
-      <div className="absolute inset-0 bg-gradient-sun-down pointer-events-none"></div>
+    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-gradient-sun-down">
+      <div className="absolute inset-0 pointer-events-none"></div>
       <div className="container mx-auto px-4 py-32 sm:py-48 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
           <div className="inline-block px-3 py-1 rounded-none bg-primary/10 text-balta text-xs font-medium mb-6 animate-pulse-opacity">
@@ -45,7 +45,7 @@ const Hero = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute -bottom-16 left-0 right-0 h-32 bg-gradient-to-t from-[#222222] to-transparent pointer-events-none"></div>
+      <div className="absolute -bottom-16 left-0 right-0 h-32 pointer-events-none"></div>
     </section>
   );
 };
