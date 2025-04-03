@@ -4,6 +4,8 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, ChevronRight, CheckCircle } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -64,7 +66,10 @@ const Index = () => {
                   <li className="dark-text">Basic comparison tools</li>
                   <li className="dark-text">Email support</li>
                 </ul>
-                <button className="pricing-button">Get Started</button>
+                <button className="pricing-button">
+                  <CheckCircle className="mr-2" size={18} />
+                  Get Started
+                </button>
               </div>
               
               <div className="pricing-card popular">
@@ -77,7 +82,10 @@ const Index = () => {
                   <li className="dark-text">Priority support</li>
                   <li className="dark-text">Preference saving</li>
                 </ul>
-                <button className="pricing-button">Get Started</button>
+                <button className="pricing-button">
+                  <CheckCircle className="mr-2" size={18} />
+                  Get Started
+                </button>
               </div>
               
               <div className="pricing-card">
@@ -89,7 +97,10 @@ const Index = () => {
                   <li className="dark-text">Dedicated account manager</li>
                   <li className="dark-text">API access</li>
                 </ul>
-                <button className="pricing-button">Contact Sales</button>
+                <button className="pricing-button">
+                  <ChevronRight className="mr-2" size={18} />
+                  Contact Sales
+                </button>
               </div>
             </div>
           </div>

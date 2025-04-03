@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -23,11 +23,13 @@ const Hero = () => {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/get-recommendation">
               <button className="btn btn-primary btn-lg">
-                Get Started <ArrowRight className="ml-2" style={{ width: '1.25rem', height: '1.25rem' }} />
+                <ArrowRight className="mr-2" style={{ width: '1.25rem', height: '1.25rem' }} />
+                Get Started
               </button>
             </Link>
             <Link to="/browse">
               <button className="btn btn-outline-white btn-lg">
+                <Search className="mr-2" style={{ width: '1.25rem', height: '1.25rem' }} />
                 Browse Listings
               </button>
             </Link>

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, User, ShoppingCart, Search } from "lucide-react";
+import { Menu, X, User, ShoppingCart, Search, LogIn, UserPlus } from "lucide-react";
 import { APP_NAME } from "@/lib/constants";
 
 const Navbar = () => {
@@ -61,10 +61,16 @@ const Navbar = () => {
               <Search className="h-5 w-5" />
             </Button>
             <Link to="/login">
-              <Button variant="outline" className="rounded-none">Sign In</Button>
+              <Button variant="outline" className="rounded-none">
+                <LogIn className="mr-2 h-4 w-4" />
+                Sign In
+              </Button>
             </Link>
             <Link to="/register">
-              <Button className="rounded-none">Register</Button>
+              <Button className="rounded-none">
+                <UserPlus className="mr-2 h-4 w-4" />
+                Register
+              </Button>
             </Link>
           </div>
           
@@ -116,10 +122,16 @@ const Navbar = () => {
             </Link>
             <div className="pt-4 flex flex-col space-y-3">
               <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                <Button variant="outline" className="w-full rounded-none">Sign In</Button>
+                <Button variant="outline" className="w-full rounded-none">
+                  <LogIn className="mr-2 h-4 w-4" />
+                  Sign In
+                </Button>
               </Link>
               <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full rounded-none">Register</Button>
+                <Button className="w-full rounded-none">
+                  <UserPlus className="mr-2 h-4 w-4" />
+                  Register
+                </Button>
               </Link>
             </div>
           </div>
