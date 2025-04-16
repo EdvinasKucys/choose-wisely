@@ -205,8 +205,6 @@ const Index = () => {
                 </ul>
                 <Button className="w-full rounded-none">Subscribe Now</Button>
               </div>
-
-
             </div>
           </div>
         </section>

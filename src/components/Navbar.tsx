@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, User, ShoppingCart, Search } from "lucide-react";
 import { APP_NAME } from "@/lib/constants";
+import { LogIn } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,6 +72,7 @@ const Navbar = () => {
             </Button>
             <Link to="/login">
               <Button variant="outline" className="rounded-none">
+                <LogIn size={16} />
                 Sign In
               </Button>
             </Link>
