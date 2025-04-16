@@ -151,19 +151,25 @@ const GetRecommendation = () => {
                 <div className="w-full h-full relative">
                   <div
                     className="scan-line"
-                    style={{ top: `${progress}%` }}
+                    style={{
+                      top: `${progress}%`,
+                      height: "8px",
+                      background: "rgba(255, 255, 0, 0.7)",
+                    }}
                   ></div>
                 </div>
-                <div className="text-white text-xl font-semibold">
-                  Analyzing your profile...
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-white text-xl font-semibold">
+                    Analyzing your profile...
+                  </div>
+                  <div className="mt-2 bg-white/20 w-64 h-2 rounded-none overflow-hidden">
+                    <div
+                      className="bg-white h-full"
+                      style={{ width: `${progress}%` }}
+                    ></div>
+                  </div>
+                  <div className="mt-2 text-white">{progress}%</div>
                 </div>
-                <div className="mt-2 bg-white/20 w-64 h-2 rounded-none overflow-hidden">
-                  <div
-                    className="bg-white h-full"
-                    style={{ width: `${progress}%` }}
-                  ></div>
-                </div>
-                <div className="mt-2 text-white">{progress}%</div>
               </div>
             )}
 
