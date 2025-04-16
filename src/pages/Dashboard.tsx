@@ -33,7 +33,7 @@ const Dashboard = () => {
         "A beautiful apartment with 2 bedrooms, fully furnished and renovated.",
       price: "150000",
       category: "Real Estate",
-      images: ["https://placehold.co/600x400/e2e8f0/1e293b?text=Apartment"],
+      images: ["/modernApartment2.jpg"],
       location: "Vilnius, Lithuania",
     },
     {
@@ -42,7 +42,7 @@ const Dashboard = () => {
       description: "Low mileage, excellent condition, regularly serviced.",
       price: "25000",
       category: "Vehicles",
-      images: ["https://placehold.co/600x400/e2e8f0/1e293b?text=Car"],
+      images: ["ToyotaCamry.jpg"],
       location: "Kaunas, Lithuania",
     },
   ];
