@@ -206,48 +206,7 @@ const Index = () => {
                 <Button className="w-full rounded-none">Subscribe Now</Button>
               </div>
 
-              <div
-                className="p-6 border border-gray-200 bg-white hover:shadow-lg transition-all duration-300 scroll-animation opacity-0"
-                style={{ transitionDelay: "0.2s" }}
-              >
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                  Business
-                </h3>
-                <p className="text-gray-600 mb-6">For companies and agencies</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-gray-800">
-                    €49.99
-                  </span>
-                  <span className="text-gray-600">/month</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                    <span className="text-gray-700 text-sm">
-                      All Premium features
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                    <span className="text-gray-700 text-sm">
-                      Multiple user accounts
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                    <span className="text-gray-700 text-sm">
-                      Business analytics dashboard
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                    <span className="text-gray-700 text-sm">API access</span>
-                  </li>
-                </ul>
-                <Button variant="outline" className="w-full rounded-none">
-                  Contact Sales
-                </Button>
-              </div>
+
             </div>
           </div>
         </section>
