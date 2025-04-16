@@ -122,7 +122,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div className="p-6 border border-gray-200 bg-white hover:shadow-lg transition-all duration-300 scroll-animation opacity-0">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">
                   Basic
