@@ -23,18 +23,20 @@ const GetRecommendation = () => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const getRandomValue = () => Math.floor(Math.random() * 101);
   const [preferences, setPreferences] = useState({
     personality: {
-      extraversion: 50,
-      conscientiousness: 50,
-      openness: 50,
-      agreeableness: 50,
-      neuroticism: 50,
+      extraversion: getRandomValue(),
+      conscientiousness: getRandomValue(),
+      openness: getRandomValue(),
+      agreeableness: getRandomValue(),
+      neuroticism: getRandomValue(),
     },
     budget: "",
     category: "",
     requirements: "",
   });
+  
 
   const handleSliderChange = (
     trait: keyof typeof preferences.personality,
