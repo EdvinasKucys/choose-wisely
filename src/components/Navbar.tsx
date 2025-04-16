@@ -71,13 +71,23 @@ const Navbar = () => {
               <Search className="h-5 w-5" />
             </Button>
             <Link to="/login">
-              <Button variant="outline" className="rounded-none">
-                <LogIn size={16} />
+              <Button
+                variant="outline"
+                className="rounded-none flex items-center gap-2"
+              >
+                <span role="img" aria-label="eggplant" className="text-lg">
+                  🍆
+                </span>
                 Sign In
               </Button>
             </Link>
             <Link to="/register">
-              <Button className="rounded-none">Register</Button>
+              <Button className="rounded-none">
+                <span role="img" aria-label="peach" className="text-lg">
+                  🍑
+                </span>
+                Register
+              </Button>
             </Link>
           </div>
 

@@ -28,6 +28,9 @@ const Hero = () => {
                 size="lg"
                 className="rounded-none text-md px-8 py-6 shadow-lg"
               >
+                <span role="img" aria-label="peach" className="text-lg">
+                  🤪
+                </span>
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -37,6 +40,9 @@ const Hero = () => {
                 variant="outline"
                 className="rounded-none text-md px-8 py-6 border-white/50 bg-balta text-violetine hover:bg-white/10"
               >
+                <span role="img" aria-label="peach" className="text-lg">
+                  🤌
+                </span>
                 Browse Listings
               </Button>
             </Link>
