@@ -55,7 +55,7 @@ const Dashboard = () => {
         "Spacious 4-bedroom house with a beautiful garden and modern amenities.",
       price: "320000",
       category: "Real Estate",
-      images: ["https://placehold.co/600x400/e2e8f0/1e293b?text=House"],
+      images: ["/GardenHouse.jpg"],
       location: "Vilnius, Lithuania",
     },
   ];
