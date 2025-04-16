@@ -105,7 +105,7 @@ const GetRecommendation = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-grow pt-24 pb-16 bg-gradient-to-tr from-[#254441] to-[#7FC8A9]">
+      <main className="flex-grow pt-24 pb-16 bg-gradient-sun-down from-[#254441] to-[#7FC8A9]">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Get Personalized Recommendations
