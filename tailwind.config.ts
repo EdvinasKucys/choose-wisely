@@ -130,7 +130,7 @@ export default {
         "gradient-sun-up":
           "linear-gradient(to bottom, var(--juoda),var(--geltona), var(--raudona))",
         "gradient-sun-down":
-          "linear-gradient(to bottom, var(--juoda),var(--raudona),var(--geltona),var(--raudona) 80%,var(--juoda))",
+          "linear-gradient(to bottom, var(--juoda),var(--raudona),var(--geltona),var(--raudona) 60%,var(--juoda))",
         "gradient-sun-reverse":
           "linear-gradient(to bottom, var(--juoda),var(--raudona),var(--juoda))",
 

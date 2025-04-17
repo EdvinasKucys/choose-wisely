@@ -30,7 +30,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-sun-down relative z-10">
       <Navbar />
 
       <main>
@@ -39,7 +39,7 @@ const Index = () => {
         <Features />
 
         {/* How it works section with gradient from black to white */}
-        <section className="py-24 bg-gradient-sun-down text-white">
+        <section className="py-24 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16 scroll-animation opacity-0">
               <h2 className="text-3xl font-bold mb-4">How It Works</h2>
@@ -110,7 +110,7 @@ const Index = () => {
         </section>
 
         {/* Pricing section with gradient from dark green to light green */}
-        <section className="py-24 bg-gradient-sun-down">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16 scroll-animation opacity-0">
               <h2 className="text-3xl font-bold mb-4 text-white">
@@ -210,7 +210,7 @@ const Index = () => {
         </section>
 
         {/* Sponsors section with YouTube video */}
-        <section className="py-24 bg-gradient-sun-down text-white">
+        <section className="py-24 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16 scroll-animation opacity-0">
               <h2 className="text-3xl font-bold mb-4">Our Sponsors</h2>
