@@ -61,7 +61,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col ">
       <Navbar />
 
       <main className="flex-grow px-4 py-24 bg-gray-50">
@@ -76,8 +76,10 @@ const Dashboard = () => {
                       <User className="h-8 w-8 text-gray-500" />
                     </div>
                     <div>
-                      <CardTitle>John Doe</CardTitle>
-                      <CardDescription>john.doe@example.com</CardDescription>
+                      <CardTitle>Mantas Nesvarbu</CardTitle>
+                      <CardDescription>
+                        Mantas.Jurgelaitis@easyflow.lt
+                      </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
@@ -105,7 +107,7 @@ const Dashboard = () => {
                       >
                         <Settings className="h-4 w-4 mr-2" /> Account Settings
                       </Button>
-                      
+
                       <Button
                         variant="outline"
                         className="w-full justify-start rounded-none"

@@ -165,7 +165,7 @@ const Footer = () => {
               href="mailto:info@choosewisely.com"
               className="text-gray-400 hover:text-white transition-colors text-sm flex items-center"
             >
-              <Mail className="h-4 w-4 mr-2" /> info@choosewisely.com
+              <Mail className="h-4 w-4 mr-2" /> info@choosewisely.lt
             </a>
           </div>
         </div>

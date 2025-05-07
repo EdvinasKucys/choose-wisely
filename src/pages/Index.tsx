@@ -102,7 +102,7 @@ const Index = () => {
             >
               <Link to="/get-recommendation">
                 <Button className="rounded-none">
-                  Try It Now <ArrowRight className="ml-2 h-4 w-4" />
+                  🤤 Try It Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </div>
