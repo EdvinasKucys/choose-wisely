@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -160,16 +161,18 @@ const Dashboard = () => {
                       {myListings.map((listing) => (
                         <ListingCard key={listing.id} listing={listing} />
                       ))}
-                      <Card className="flex flex-col items-center justify-center h-full border-dashed border-2 border-gray-300 bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer">
-                        <CardContent className="flex flex-col items-center justify-center py-12">
-                          <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mb-4">
-                            <Plus className="h-6 w-6 text-gray-500" />
-                          </div>
-                          <p className="text-gray-600 font-medium">
-                            Add New Listing
-                          </p>
-                        </CardContent>
-                      </Card>
+                      <Link to="/create-listing">
+                        <Card className="flex flex-col items-center justify-center h-full border-dashed border-2 border-gray-300 bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer">
+                          <CardContent className="flex flex-col items-center justify-center py-12">
+                            <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mb-4">
+                              <Plus className="h-6 w-6 text-gray-500" />
+                            </div>
+                            <p className="text-gray-600 font-medium">
+                              Add New Listing
+                            </p>
+                          </CardContent>
+                        </Card>
+                      </Link>
                     </div>
                   ) : (
                     <div className="text-center py-12 bg-gray-50">
@@ -181,9 +184,11 @@ const Dashboard = () => {
                         Get started by creating a new listing.
                       </p>
                       <div className="mt-6">
-                        <Button>
-                          <Plus className="h-4 w-4 mr-2" /> Add New Listing
-                        </Button>
+                        <Link to="/create-listing">
+                          <Button>
+                            <Plus className="h-4 w-4 mr-2" /> Add New Listing
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   )}
