@@ -68,11 +68,11 @@ const CreateListing = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-sun-down">
       <Navbar />
 
-      <main className="flex-grow px-4 py-24 bg-gray-50">
-        <div className="container mx-auto max-w-4xl">
+      <main className="flex-grow px-4 py-24">
+        <div className="container mx-auto max-w-4xl bg-white rounded-lg shadow-lg p-6 space-y-6">
           <div className="mb-6">
             <Link
               to="/dashboard"
@@ -109,7 +109,7 @@ const CreateListing = () => {
                       <SelectTrigger id="category" className="rounded-none">
                         <SelectValue placeholder="Select category" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="bg-white">
                         {CATEGORIES.map((category) => (
                           <SelectItem key={category} value={category}>
                             {category}

@@ -12,6 +12,7 @@ import Browse from "./pages/Browse";
 import GetRecommendation from "./pages/GetRecommendation";
 import Reviews from "./pages/Reviews";
 import Payment from "./pages/Payment";
+import CreateListing from "./pages/CreateListing";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/get-recommendation" element={<GetRecommendation />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/create-listing" element={<CreateListing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
