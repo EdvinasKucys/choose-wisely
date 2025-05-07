@@ -29,7 +29,7 @@ const ListingCard = ({ listing, onView, onSave }: ListingCardProps) => {
 
   return (
     <Card
-      className="overflow-hidden border-gray-200 transition-all duration-300 hover:shadow-md"
+      className="overflow-hidden border-none transition-all duration-300 hover:shadow-md bg-white"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

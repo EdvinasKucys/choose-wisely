@@ -154,7 +154,7 @@ const Index = () => {
                   </li>
                 </ul>
                 <Button variant="outline" className="w-full rounded-none">
-                  Get Started
+                  😏 Get Started
                 </Button>
               </div>
 
@@ -203,7 +203,9 @@ const Index = () => {
                     </span>
                   </li>
                 </ul>
-                <Button className="w-full rounded-none">Subscribe Now</Button>
+                <Button className="w-full rounded-none">
+                  🤑 Subscribe Now
+                </Button>
               </div>
             </div>
           </div>

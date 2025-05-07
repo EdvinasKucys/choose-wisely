@@ -62,18 +62,18 @@ const Browse = () => {
   );
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-sun-down">
       <Navbar />
 
       <main className="flex-grow pt-24 pb-16">
-        <div className="w-full py-12 bg-gradient-to-tr from-[#1a472a] to-[#b8e0d2]">
+        <div className="w-full py-12 ">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl font-bold text-white mb-6">
               Browse Listings
             </h1>
             <p className="text-white/90 max-w-2xl mb-8">
-              Explore our marketplace of items posted by users. Find the perfect
-              match for your needs and preferences.
+              Explore our marketplace of items. Find the perfect match for your
+              needs and preferences.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4">

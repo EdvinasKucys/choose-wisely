@@ -36,7 +36,6 @@ const GetRecommendation = () => {
     category: "",
     requirements: "",
   });
-  
 
   const handleSliderChange = (
     trait: keyof typeof preferences.personality,
@@ -385,14 +384,14 @@ const GetRecommendation = () => {
                           personality, with excellent safety features and the
                           right size for your needs.
                         </p>
-                        <p className="font-medium mt-2">€38,500</p>
+                        <p className="font-medium mt-2">🐕🪙38,500</p>
                         <Button className="w-full mt-3 rounded-none">
-                          View Details
+                          🔍 View Details
                         </Button>
                       </div>
                     </Card>
 
-                    <Card className="rounded-none overflow-hidden border border-gray-200">
+                    <Card className="rounded-none overflow-hidden border border-gray-200 relative">
                       <div className="h-48 bg-gray-200 flex items-center justify-center">
                         <img
                           src="/audi.jpg"
@@ -401,15 +400,82 @@ const GetRecommendation = () => {
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className="font-semibold">Audi Q5 2021</h3>
-                        <p className="text-sm text-gray-600 mt-1">
-                          Perfect balance of luxury and functionality, aligning
-                          with your organized and detail-oriented nature.
-                        </p>
-                        <p className="font-medium mt-2">€42,800</p>
+                        <div className="">
+                          <h3 className="font-semibold">Audi Q5 2021</h3>
+                          <p className="text-sm text-gray-600 mt-1">
+                            Perfect balance of luxury and functionality,
+                            aligning with your organized and detail-oriented
+                            nature.
+                          </p>
+                          <p className="font-medium mt-2">🪙🐕42,800</p>
+                        </div>
                         <Button className="w-full mt-3 rounded-none">
-                          View Details
+                          🔍 View Details
                         </Button>
+                      </div>
+                    </Card>
+
+                    <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                      <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                        <img
+                          src="/audi.jpg"
+                          alt="Recommendation"
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div className="p-4 blur-sm">
+                        <div className="">
+                          <h3 className="font-semibold">Audi Q5 2021</h3>
+                          <p className="text-sm text-gray-600 mt-1">
+                            Perfect balance of luxury and functionality,
+                            aligning with your organized and detail-oriented
+                            nature.
+                          </p>
+                          <p className="font-medium mt-2">🪙🐕42,800</p>
+                        </div>
+                        <Button className="w-full mt-3 rounded-none">
+                          🔍 View Details
+                        </Button>
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Link
+                          to="/payment"
+                          className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                        >
+                          😎 Subscribe to see more
+                        </Link>
+                      </div>
+                    </Card>
+
+                    <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                      <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                        <img
+                          src="/audi.jpg"
+                          alt="Recommendation"
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div className="p-4 blur-sm">
+                        <div className="">
+                          <h3 className="font-semibold">Audi Q5 2021</h3>
+                          <p className="text-sm text-gray-600 mt-1">
+                            Perfect balance of luxury and functionality,
+                            aligning with your organized and detail-oriented
+                            nature.
+                          </p>
+                          <p className="font-medium mt-2">🪙🐕42,800</p>
+                        </div>
+                        <Button className="w-full mt-3 rounded-none">
+                          🔍 View Details
+                        </Button>
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Link
+                          to="/payment"
+                          className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                        >
+                          😎 Subscribe to see more
+                        </Link>
                       </div>
                     </Card>
                   </div>
@@ -422,7 +488,7 @@ const GetRecommendation = () => {
                   <div className="flex justify-center mt-6">
                     <Link to="/browse">
                       <Button className="rounded-none">
-                        Browse More Recommendations{" "}
+                        🔍 Browse More Recommendations{" "}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -438,7 +504,7 @@ const GetRecommendation = () => {
                     className="rounded-none"
                     onClick={prevStep}
                   >
-                    Back
+                    👈 Back
                   </Button>
                 )}
 
@@ -462,7 +528,7 @@ const GetRecommendation = () => {
                     className="rounded-none ml-auto"
                     onClick={() => setStep(1)}
                   >
-                    Start New Search
+                    🤩 Start New Search
                   </Button>
                 )}
               </div>
