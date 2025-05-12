@@ -153,9 +153,11 @@ const Index = () => {
                     </span>
                   </li>
                 </ul>
-                <Button variant="outline" className="w-full rounded-none">
-                  😏 Get Started
-                </Button>
+                <Link to="/get-recommendation">
+                  <Button className="w-full rounded-none">
+                    😏 Get Started
+                  </Button>
+                </Link>
               </div>
 
               <div
@@ -203,9 +205,11 @@ const Index = () => {
                     </span>
                   </li>
                 </ul>
-                <Button className="w-full rounded-none">
-                  🤑 Subscribe Now
-                </Button>
+                <Link to="/Payment">
+                  <Button className="w-full rounded-none">
+                    🤑 Subscribe now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
