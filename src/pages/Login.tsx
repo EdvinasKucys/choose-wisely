@@ -15,9 +15,11 @@ import { Label } from "@/components/ui/label";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, User, Lock, Globe } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ const Login = () => {
     setTimeout(() => {
       setIsLoading(false);
       // Handle login logic here
+      navigate("../");
     }, 1500);
   };
 
