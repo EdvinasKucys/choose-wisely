@@ -15,9 +15,11 @@ import { Label } from "@/components/ui/label";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, CreditCard, User, Calendar, Lock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ const Payment = () => {
     setTimeout(() => {
       setIsLoading(false);
       // Handle payment logic here
+      navigate("../");
     }, 1500);
   };
 
