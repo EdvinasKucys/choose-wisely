@@ -78,7 +78,7 @@ const Dashboard = () => {
                     </div>
                     <div>
                       <CardTitle>Mantas Nesvarbu</CardTitle>
-                      <CardDescription>Mantas@EasyFlow.com</CardDescription>
+                      <CardDescription>Mantas@EasyFlow.lt</CardDescription>
                     </div>
                   </div>
                 </CardHeader>

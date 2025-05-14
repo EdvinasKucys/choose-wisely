@@ -121,7 +121,7 @@ const Payment = () => {
                 <div className="bg-gray-50 p-4 rounded-md">
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-600">Subtotal</span>
-                    <span>$89.99</span>
+                    <span>$9.99</span>
                   </div>
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-600">Tax</span>
@@ -129,7 +129,7 @@ const Payment = () => {
                   </div>
                   <div className="border-t pt-2 mt-2 flex justify-between font-medium">
                     <span>Total</span>
-                    <span>$98.98</span>
+                    <span>$18.98</span>
                   </div>
                 </div>
               </div>
@@ -171,7 +171,7 @@ const Payment = () => {
                     Processing Payment...
                   </div>
                 ) : (
-                  <span>Pay $98.98</span>
+                  <span>💸 Pay $18.98</span>
                 )}
               </Button>
             </form>

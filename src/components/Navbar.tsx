@@ -154,11 +154,11 @@ const Navbar = () => {
             <div className="pt-4 flex flex-col space-y-3">
               <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="outline" className="w-full rounded-none">
-                  Sign In
+                  🍆 Sign In
                 </Button>
               </Link>
               <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full rounded-none">Register</Button>
+                <Button className="w-full rounded-none">🍑 Register</Button>
               </Link>
             </div>
           </div>
