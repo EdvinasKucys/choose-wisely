@@ -78,9 +78,7 @@ const Dashboard = () => {
                     </div>
                     <div>
                       <CardTitle>Mantas Nesvarbu</CardTitle>
-                      <CardDescription>
-                        Mantas.Jurgelaitis@easyflow.lt
-                      </CardDescription>
+                      <CardDescription>Mantas@EasyFlow.com</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
