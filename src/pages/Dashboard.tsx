@@ -134,7 +134,7 @@ const Dashboard = () => {
             {/* Main Content */}
             <div className="md:col-span-9">
               <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold">Dashboard</h1>
+                <h1 className="text-2xl font-bold text-white">Dashboard</h1>
                 <Button className="rounded-none">
                   <Plus className="h-4 w-4 mr-2" />{" "}
                   <Link to="/create-listing">New Listing</Link>
