@@ -62,15 +62,15 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col ">
+    <div className="min-h-screen flex flex-col bg-gradient-sun-down">
       <Navbar />
 
-      <main className="flex-grow px-4 py-24 bg-gray-50">
+      <main className="flex-grow px-4 py-24">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             {/* Sidebar */}
             <div className="md:col-span-3">
-              <Card className="sticky top-24">
+              <Card className="sticky top-24 bg-white">
                 <CardHeader className="pb-2">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
@@ -143,13 +143,22 @@ const Dashboard = () => {
 
               <Tabs defaultValue="listings">
                 <TabsList className="grid grid-cols-3 mb-8">
-                  <TabsTrigger value="listings" className="rounded-none">
+                  <TabsTrigger
+                    value="listings"
+                    className="rounded-none border-solid border-2 border-gray-50 bg-white/20"
+                  >
                     My Listings
                   </TabsTrigger>
-                  <TabsTrigger value="saved" className="rounded-none">
+                  <TabsTrigger
+                    value="saved"
+                    className="rounded-none border-solid border-2 border-gray-50 bg-white/20"
+                  >
                     Saved Items
                   </TabsTrigger>
-                  <TabsTrigger value="recommendations" className="rounded-none">
+                  <TabsTrigger
+                    value="recommendations"
+                    className="rounded-none border-solid border-2 border-gray-50 bg-white/20"
+                  >
                     Recommendations
                   </TabsTrigger>
                 </TabsList>
@@ -161,7 +170,7 @@ const Dashboard = () => {
                         <ListingCard key={listing.id} listing={listing} />
                       ))}
                       <Link to="/create-listing">
-                        <Card className="flex flex-col items-center justify-center h-full border-dashed border-2 border-gray-300 bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <Card className="flex flex-col items-center justify-center h-full border-dashed border-2 border-gray-300 bg-gray-40 hover:bg-gray-50 transition-colors cursor-pointer">
                           <CardContent className="flex flex-col items-center justify-center py-12">
                             <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mb-4">
                               <Plus className="h-6 w-6 text-gray-500" />
