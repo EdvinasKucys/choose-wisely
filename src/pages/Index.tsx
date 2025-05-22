@@ -1,136 +1,245 @@
-
-import React from 'react';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight, CheckCircle } from 'lucide-react';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
+import { ArrowRight, Check, ArrowDownCircle } from "lucide-react";
 
 const Index = () => {
+  // Smooth scroll animation
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".scroll-animation");
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight - 100;
+
+        if (isVisible) {
+          element.classList.add("animate-slide-up");
+          element.classList.remove("opacity-0");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initialize on load
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="index-page">
+    <div className="min-h-screen bg-gradient-sun-down relative z-10">
       <Navbar />
-      
-      <Hero />
-      
-      <Features />
-      
-      {/* How It Works Section */}
-      <section className="how-it-works-section">
-        <div className="container">
-          <div className="section-content">
-            <h2 className="section-title">How It Works</h2>
-            <p className="section-description">
-              Our platform uses advanced algorithms to analyze your preferences and match you with the perfect options.
-            </p>
-            
-            <div className="steps-container">
-              <div className="step-item">
-                <div className="step-number">1</div>
-                <h3 className="step-title">Tell Us About Yourself</h3>
-                <p className="step-description">Complete a simple questionnaire about your preferences, style, and needs.</p>
+
+      <main>
+        <Hero />
+
+        <Features />
+
+        {/* How it works section with gradient from black to white */}
+        <section className="py-24 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-16 scroll-animation opacity-0">
+              <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+              <p className="text-gray-300">
+                Our intelligent platform simplifies decision-making through
+                personalized analysis and recommendations.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="relative p-6 border border-gray-700 bg-gray-800/50 shadow-sm scroll-animation opacity-0">
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary text-white flex items-center justify-center rounded-none">
+                  1
+                </div>
+                <h3 className="text-lg font-semibold mb-3 mt-2 text-white">
+                  Upload Your Information
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  Share details about your preferences, style, and needs to help
+                  our system understand you better.
+                </p>
               </div>
-              
-              <div className="step-item">
-                <div className="step-number">2</div>
-                <h3 className="step-title">Receive Personalized Recommendations</h3>
-                <p className="step-description">Our algorithm will analyze your inputs and generate tailored recommendations.</p>
+
+              <div
+                className="relative p-6 border border-gray-700 bg-gray-800/50 shadow-sm scroll-animation opacity-0"
+                style={{ transitionDelay: "0.1s" }}
+              >
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary text-white flex items-center justify-center rounded-none">
+                  2
+                </div>
+                <h3 className="text-lg font-semibold mb-3 mt-2 text-white">
+                  Our AI Analyzes
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  Our advanced algorithm processes your information and compares
+                  it with thousands of options.
+                </p>
               </div>
-              
-              <div className="step-item">
-                <div className="step-number">3</div>
-                <h3 className="step-title">Make Informed Decisions</h3>
-                <p className="step-description">Review detailed comparisons and make choices with confidence.</p>
+
+              <div
+                className="relative p-6 border border-gray-700 bg-gray-800/50 shadow-sm scroll-animation opacity-0"
+                style={{ transitionDelay: "0.2s" }}
+              >
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary text-white flex items-center justify-center rounded-none">
+                  3
+                </div>
+                <h3 className="text-lg font-semibold mb-3 mt-2 text-white">
+                  Get Personalized Results
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  Receive tailored recommendations that match your unique
+                  profile and preferences.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="text-center mt-12 scroll-animation opacity-0"
+              style={{ transitionDelay: "0.3s" }}
+            >
+              <Link to="/get-recommendation">
+                <Button className="rounded-none">
+                  🤤 Try It Now <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing section with gradient from dark green to light green */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-16 scroll-animation opacity-0">
+              <h2 className="text-3xl font-bold mb-4 text-white">
+                Simple Pricing
+              </h2>
+              <p className="text-gray-200">
+                Choose the plan that fits your needs and start making better
+                decisions today.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="p-6 border border-gray-200 bg-white hover:shadow-lg transition-all duration-300 scroll-animation opacity-0">
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  Basic
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  For individuals starting out
+                </p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-gray-800">Free</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                    <span className="text-gray-700 text-sm">
+                      Basic recommendations
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                    <span className="text-gray-700 text-sm">
+                      3 decision categories
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                    <span className="text-gray-700 text-sm">
+                      Community marketplace access
+                    </span>
+                  </li>
+                </ul>
+                <Link to="/get-recommendation">
+                  <Button className="w-full rounded-none">
+                    😏 Get Started
+                  </Button>
+                </Link>
+              </div>
+
+              <div
+                className="p-6 border-2 border-primary bg-white relative shadow-lg scroll-animation opacity-0"
+                style={{ transitionDelay: "0.1s" }}
+              >
+                <div className="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-xs font-semibold transform translate-y-0 translate-x-0">
+                  POPULAR
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  Premium
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  For serious decision makers
+                </p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-gray-800">
+                    €9.99
+                  </span>
+                  <span className="text-gray-600">/month</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                    <span className="text-gray-700 text-sm">
+                      Advanced personalized recommendations
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                    <span className="text-gray-700 text-sm">
+                      All decision categories
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                    <span className="text-gray-700 text-sm">
+                      Priority matching with listings
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                    <span className="text-gray-700 text-sm">
+                      No advertisements
+                    </span>
+                  </li>
+                </ul>
+                <Link to="/Payment">
+                  <Button className="w-full rounded-none">
+                    🤑 Subscribe now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Simple Pricing Section */}
-      <section className="pricing-section">
-        <div className="container">
-          <div className="section-content">
-            <h2 className="section-title">Simple Pricing</h2>
-            <p className="section-description dark-text">
-              Choose the plan that works best for you
-            </p>
-            
-            <div className="pricing-container">
-              <div className="pricing-card">
-                <h3 className="pricing-title dark-text">Basic</h3>
-                <div className="pricing-price dark-text">$9/month</div>
-                <ul className="pricing-features">
-                  <li className="dark-text">5 recommendations per month</li>
-                  <li className="dark-text">Basic comparison tools</li>
-                  <li className="dark-text">Email support</li>
-                </ul>
-                <button className="pricing-button">
-                  <CheckCircle className="mr-2" size={18} />
-                  Get Started
-                </button>
-              </div>
-              
-              <div className="pricing-card popular">
-                <div className="popular-badge">Most Popular</div>
-                <h3 className="pricing-title dark-text">Pro</h3>
-                <div className="pricing-price dark-text">$19/month</div>
-                <ul className="pricing-features">
-                  <li className="dark-text">Unlimited recommendations</li>
-                  <li className="dark-text">Advanced comparison tools</li>
-                  <li className="dark-text">Priority support</li>
-                  <li className="dark-text">Preference saving</li>
-                </ul>
-                <button className="pricing-button">
-                  <CheckCircle className="mr-2" size={18} />
-                  Get Started
-                </button>
-              </div>
-              
-              <div className="pricing-card">
-                <h3 className="pricing-title dark-text">Enterprise</h3>
-                <div className="pricing-price dark-text">$49/month</div>
-                <ul className="pricing-features">
-                  <li className="dark-text">All Pro features</li>
-                  <li className="dark-text">Custom integrations</li>
-                  <li className="dark-text">Dedicated account manager</li>
-                  <li className="dark-text">API access</li>
-                </ul>
-                <button className="pricing-button">
-                  <ChevronRight className="mr-2" size={18} />
-                  Contact Sales
-                </button>
+        </section>
+
+        {/* Sponsors section with YouTube video */}
+        <section className="py-24 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-16 scroll-animation opacity-0">
+              <h2 className="text-3xl font-bold mb-4">Our Sponsors</h2>
+              <p className="text-gray-300 mb-8">
+                We are proud to partner with industry-leading organizations who
+                share our vision.
+              </p>
+
+              <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
+                <iframe
+                  className="w-full h-[480px]"
+                  src="https://www.youtube.com/embed/UvZfBz3zUlM"
+                  title="Sponsor Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Sponsors Section */}
-      <section className="sponsors-section">
-        <div className="container">
-          <div className="section-content">
-            <h2 className="section-title">Our Sponsors</h2>
-            <p className="section-description">
-              We're proud to be supported by these amazing partners
-            </p>
-            
-            <div className="video-container">
-              <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/UvZfBz3zUlM" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-      
+        </section>
+      </main>
+
       <Footer />
     </div>
   );
