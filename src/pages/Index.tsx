@@ -219,7 +219,7 @@ const Index = () => {
         <section className="py-24 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16 scroll-animation opacity-0">
-              <h2 className="text-3xl font-bold mb-4">Our Sponsors</h2>
+              <h2 className="text-3xl font-bold mb-4">Advertisement</h2>
               <p className="text-gray-300 mb-8">
                 We are proud to partner with industry-leading organizations who
                 share our vision.
@@ -228,7 +228,7 @@ const Index = () => {
               <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
                 <iframe
                   className="w-full h-[480px]"
-                  src="https://www.youtube.com/embed/UvZfBz3zUlM"
+                  src="https://www.youtube.com/embed/YWKbgZ7B9x4"
                   title="Sponsor Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
