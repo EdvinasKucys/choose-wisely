@@ -145,7 +145,7 @@ const Register = () => {
                     Creating Account...
                   </div>
                 ) : (
-                  <span>Create Account</span>
+                  <span>👉 Create Account 👈</span>
                 )}
               </Button>
             </form>
