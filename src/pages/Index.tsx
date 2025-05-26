@@ -228,7 +228,7 @@ const Index = () => {
               <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
                 <iframe
                   className="w-full h-[480px]"
-                  src="https://www.youtube.com/embed/YWKbgZ7B9x4"
+                  src="https://www.youtube.com/embed/lQ-_NEyex40"
                   title="Sponsor Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
