@@ -430,20 +430,22 @@ const GetRecommendation = () => {
                     <Card className="rounded-none overflow-hidden border border-gray-200 relative">
                       <div className="h-48 bg-gray-200 flex items-center justify-center">
                         <img
-                          src="/audi.jpg"
+                          src="/modernApartment.jpg"
                           alt="Recommendation"
                           className="h-full w-full object-cover"
                         />
                       </div>
                       <div className="p-4">
                         <div className="">
-                          <h3 className="font-semibold">Audi Q5 2021</h3>
+                          <h3 className="font-semibold">
+                            Modern Apartment in City Center
+                          </h3>
                           <p className="text-sm text-gray-600 mt-1">
-                            Perfect balance of luxury and functionality,
-                            aligning with your organized and detail-oriented
-                            nature.
+                            This spacious 2-bedroom apartment with modern
+                            amenities and great city views matches your stylish
+                            personality.
                           </p>
-                          <p className="font-medium mt-2">🪙🐕42,800</p>
+                          <p className="font-medium mt-2">🪙🐕120,000</p>
                         </div>
                         <Button className="w-full mt-3 rounded-none">
                           🔍 View Details
@@ -590,7 +592,127 @@ const GetRecommendation = () => {
                       <div className="">
                         <h3 className="font-semibold">Switzerland</h3>
                         <p className="text-sm text-gray-600 mt-1">
-                          Perfect balance of luxury
+                          Discover breathtaking landscapes and world-class
+                          experiences in Switzerland.
+                        </p>
+                        <p className="font-medium mt-2">🪙🐕42,800</p>
+                      </div>
+                      <Button className="w-full mt-3 rounded-none">
+                        🔍 View Details
+                      </Button>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        to="/payment"
+                        className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                      >
+                        😎 Subscribe to see more
+                      </Link>
+                    </div>
+                  </Card>
+
+                  <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                      <img
+                        src="/Hobbie.jpg"
+                        alt="Recommendation"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 blur-sm">
+                      <div className="">
+                        <h3 className="font-semibold"></h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Express your creativity and relax with painting as
+                          your new hobby.
+                        </p>
+                        <p className="font-medium mt-2">🪙🐕42,800</p>
+                      </div>
+                      <Button className="w-full mt-3 rounded-none">
+                        🔍 View Details
+                      </Button>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        to="/payment"
+                        className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                      >
+                        😎 Subscribe to see more
+                      </Link>
+                    </div>
+                  </Card>
+
+                  <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                      <img
+                        src="/Man.jpg"
+                        alt="Recommendation"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 blur-sm">
+                      <div className="">
+                        <h3 className="font-semibold"></h3>
+                        <p className="text-sm text-gray-600 mt-1">Your type</p>
+                        <p className="font-medium mt-2">🪙🐕42,800</p>
+                      </div>
+                      <Button className="w-full mt-3 rounded-none">
+                        🔍 View Details
+                      </Button>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        to="/payment"
+                        className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                      >
+                        😎 Subscribe to see more
+                      </Link>
+                    </div>
+                  </Card>
+
+                  <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                      <img
+                        src="/kid.jpg"
+                        alt="Recommendation"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 blur-sm">
+                      <div className="">
+                        <h3 className="font-semibold"></h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          All from your genes
+                        </p>
+                        <p className="font-medium mt-2">🪙🐕42,800</p>
+                      </div>
+                      <Button className="w-full mt-3 rounded-none">
+                        🔍 View Details
+                      </Button>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        to="/payment"
+                        className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                      >
+                        😎 Subscribe to see more
+                      </Link>
+                    </div>
+                  </Card>
+
+                  <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                      <img
+                        src="/Diet.jpg"
+                        alt="Recommendation"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 blur-sm">
+                      <div className="">
+                        <h3 className="font-semibold"></h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Best suiting nutrition plan for you
                         </p>
                         <p className="font-medium mt-2">🪙🐕42,800</p>
                       </div>
