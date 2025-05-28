@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, User, ShoppingCart, Search } from "lucide-react";
 import { APP_NAME } from "@/lib/constants";
 import { LogIn } from "lucide-react";
+import Logo from "../../public/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +22,9 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link
               to="/"
-              className="text-lg sm:text-xl font-semibold text-primary transition-all duration-300 hover:opacity-80"
+              className="text-lg sm:text-xl font-semibold text-primary transition-all duration-300 hover:opacity-80 flex items-center gap-2"
             >
+              <img src={Logo} alt="Logo" className="h-8 w-8 object-contain" />
               {APP_NAME}
             </Link>
           </div>

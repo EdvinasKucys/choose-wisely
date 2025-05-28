@@ -1,4 +1,4 @@
-export const APP_NAME = "Choose Wisely";
+export const APP_NAME = "EasyFlow";
 
 export const CATEGORIES = [
   "Real Estate",

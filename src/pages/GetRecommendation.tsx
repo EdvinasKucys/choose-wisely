@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -36,6 +36,8 @@ const GetRecommendation = () => {
     category: "",
     requirements: "",
   });
+  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSliderChange = (
     trait: keyof typeof preferences.personality,
@@ -58,6 +60,17 @@ const GetRecommendation = () => {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file && file.type.startsWith("image/")) {
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        setUploadedImage(ev.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   const nextStep = () => {
@@ -213,9 +226,32 @@ const GetRecommendation = () => {
 
                     <div className="flex flex-col space-y-4">
                       <Label>Upload a photo of yourself (optional)</Label>
-                      <Button variant="outline" className="rounded-none">
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        onChange={handleImageChange}
+                        disabled={!!uploadedImage}
+                      />
+                      <Button
+                        variant="outline"
+                        className="rounded-none"
+                        type="button"
+                        onClick={() => fileInputRef.current?.click()}
+                        disabled={!!uploadedImage}
+                      >
                         <Upload className="h-4 w-4 mr-2" /> Browse Files
                       </Button>
+                      {uploadedImage && (
+                        <div className="mt-2">
+                          <img
+                            src={uploadedImage}
+                            alt="Uploaded"
+                            className="max-h-40 rounded shadow border"
+                          />
+                        </div>
+                      )}
                       <p className="text-xs text-gray-500">
                         Your photo helps our AI understand your style
                         preferences better. We'll never share your photo with
@@ -418,7 +454,7 @@ const GetRecommendation = () => {
                     <Card className="rounded-none overflow-hidden border border-gray-200 relative">
                       <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
                         <img
-                          src="/audi.jpg"
+                          src="/audi2.jpg"
                           alt="Recommendation"
                           className="h-full w-full object-cover"
                         />
@@ -450,7 +486,7 @@ const GetRecommendation = () => {
                     <Card className="rounded-none overflow-hidden border border-gray-200 relative">
                       <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
                         <img
-                          src="/audi.jpg"
+                          src="/audi3.jpg"
                           alt="Recommendation"
                           className="h-full w-full object-cover"
                         />
@@ -479,6 +515,98 @@ const GetRecommendation = () => {
                       </div>
                     </Card>
                   </div>
+
+                  <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                      <img
+                        src="/Dog.jpg"
+                        alt="Recommendation"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 blur-sm">
+                      <div className="">
+                        <h3 className="font-semibold">Labrador</h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Perfect Dog for your family.
+                        </p>
+                        <p className="font-medium mt-2">🪙🐕42,800</p>
+                      </div>
+                      <Button className="w-full mt-3 rounded-none">
+                        🔍 View Details
+                      </Button>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        to="/payment"
+                        className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                      >
+                        😎 Subscribe to see more
+                      </Link>
+                    </div>
+                  </Card>
+
+                  <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                      <img
+                        src="/Studies.jpg"
+                        alt="Recommendation"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 blur-sm">
+                      <div className="">
+                        <h3 className="font-semibold">
+                          Kauno technologijos universitetas
+                        </h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Best university for your studies.
+                        </p>
+                        <p className="font-medium mt-2">🪙🐕42,800</p>
+                      </div>
+                      <Button className="w-full mt-3 rounded-none">
+                        🔍 View Details
+                      </Button>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        to="/payment"
+                        className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                      >
+                        😎 Subscribe to see more
+                      </Link>
+                    </div>
+                  </Card>
+
+                  <Card className="rounded-none overflow-hidden border border-gray-200 relative">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center blur-md">
+                      <img
+                        src="/Travel.jpg"
+                        alt="Recommendation"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 blur-sm">
+                      <div className="">
+                        <h3 className="font-semibold">Switzerland</h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Perfect balance of luxury
+                        </p>
+                        <p className="font-medium mt-2">🪙🐕42,800</p>
+                      </div>
+                      <Button className="w-full mt-3 rounded-none">
+                        🔍 View Details
+                      </Button>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        to="/payment"
+                        className="bg-primary hover:bg-blue-700 text-primary-foreground font-medium py-2 px-4 rounded shadow-lg"
+                      >
+                        😎 Subscribe to see more
+                      </Link>
+                    </div>
+                  </Card>
 
                   <p className="text-center text-sm text-gray-500 mt-4">
                     These recommendations are based on our analysis of your
